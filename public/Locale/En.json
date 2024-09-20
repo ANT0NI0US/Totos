@@ -1,0 +1,14 @@
+{
+  "general": {
+    "english": "English",
+    "arabic": "Arabic",
+    "backToDashboard": "Back To Dashboard",
+    "pageNotFound": "Page Not Found"
+  },
+  "dashboard": {
+    "dashboard": "Dashboard",
+    "ourService": "Our Service",
+    "whoAreWe": "Who Are We",
+    "ourBusiness": "Our Business"
+  }
+}

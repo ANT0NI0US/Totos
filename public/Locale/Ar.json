@@ -1,0 +1,14 @@
+{
+  "general": {
+    "english": "الانجليزية",
+    "arabic": "العربية",
+    "backToDashboard": "العودة للوحة المؤشر",
+    "pageNotFound": "الصفحة غير موجودة"
+  },
+  "dashboard": {
+    "dashboard": "لوحة المؤشرات",
+    "ourService": "خدمتنا",
+    "whoAreWe": "من نحن",
+    "ourBusiness": "اعمالنا"
+  }
+}
