@@ -1,7 +1,5 @@
 import { HashRouter } from "react-router-dom";
 
-const RoutesProvider = ({ children }) => {
+export default function RoutesProvider({ children }) {
   return <HashRouter hashType="hashbang">{children}</HashRouter>;
-};
-
-export default RoutesProvider;
+}

@@ -2,18 +2,25 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        merienda: ["Merienda", "cursive"],
+        Monoton: ["Monoton"],
+      },
       height: {
         screen: "100dvh",
       },
       colors: {
-        white: "#FFFF",
-        primary: "#12BBC2",
-        lightPrimary: "#D2FBFA",
-        bgColor: "#F8F7F7",
-        darkPrimary: "#167C88",
-        textColor: "#686161",
-        darkB: "#2D404E",
-        lightGray: "#BCD2E0",
+        primary: "#01112b",
+        secondary: "#021637",
+        light: "#e5f0ff",
+        orange: "#b78a00",
+      },
+      screens: {
+        xs: "480px",
+        sm: "768px",
+        md: "1060px",
+        lg: "1280px",
+        xl: "1600px",
       },
     },
   },

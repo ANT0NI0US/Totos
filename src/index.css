@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,12 +12,13 @@
   box-sizing: border-box;
 }
 
-*[dir="ltr"] body {
-  font-family: Inter, sans-serif;
-}
-
-*[dir="rtl"] body {
-  font-family: Cairo, sans-serif;
+body {
+  font-family: "Merienda";
+  background-image: url(./assets/mainBackgroundImage.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 @layer components {
@@ -33,25 +38,27 @@
 
 /* scrollbar Syles */
 *::-webkit-scrollbar {
-  width: 5px;
-  width: 5px;
+  @apply w-[5px];
 }
 *::-webkit-scrollbar-track {
-  border-radius: 20px;
-  background-color: #bcd2e0;
+  @apply bg-light;
 }
 
 *::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: #576e7e;
+  @apply bg-secondary;
 }
 
 /* Vertical scrollbar */
 *::-webkit-scrollbar:vertical {
-  width: 10px;
+  @apply w-[8px];
 }
 
 /* Horizontal scrollbar */
 *::-webkit-scrollbar:horizontal {
-  height: 10px;
+  @apply h-[10px];
+}
+
+.lazy-load-image-background {
+  display: block !important;
+  height: 100% !important;
 }
