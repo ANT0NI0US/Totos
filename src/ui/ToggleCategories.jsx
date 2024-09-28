@@ -4,7 +4,7 @@ export default function ToggleCategories({
   categories,
 }) {
   return (
-    <div className="w-fit rounded-md bg-primary p-2 text-light">
+    <div className="w-fit rounded-md bg-secondary p-2 text-light">
       <div className="flexCenter flex-wrap gap-4">
         {categories?.map((category) => (
           <button

@@ -1,12 +1,15 @@
+import { useParams } from "react-router-dom";
 import useGetDataFromApi from "../../hooks/useGetDataFromApi";
 import GridContainer from "../../ui/GridContainer";
 import List from "../../ui/List";
 import Spinner from "../../ui/loader/Spinner";
 import Pagination from "../../ui/Pagination";
 
-export default function Trending() {
-  const { data, isLoading, updateParams } =
-    useGetDataFromApi(`trending/all/day`);
+export default function SearchResult() {
+  const { searchTitle, movieType } = useParams();
+  const { data, isLoading, updateParams } = useGetDataFromApi(
+    `search/${movieType}?query=${searchTitle}&include_adult=true`,
+  );
 
   const totalPages = data?.total_pages || 1;
   const currentPage = data?.page || 1;

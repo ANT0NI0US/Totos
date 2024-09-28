@@ -1,7 +1,7 @@
 export default function Title({ text, Styles }) {
   return (
     <h1
-      className={`font-Monoton text-start text-xl uppercase text-light sm:text-2xl ${Styles}`}
+      className={`text-center font-Monoton text-lg uppercase text-light  sm:text-start sm:text-xl md:text-2xl lg:text-3xl ${Styles}`}
       style={{ letterSpacing: "5px" }}
     >
       {text}

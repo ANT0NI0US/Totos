@@ -4,14 +4,13 @@ export default {
     extend: {
       container: {
         center: true,
-        padding: {
-          DEFAULT: "5px",
-          xs: "5px",
-          sm: "10px",
-          md: "15px",
-          lg: "20px",
-          xl: "25px",
-          "2xl": "30px",
+        padding: "10px",
+        screens: {
+          sm: "800px",
+          md: "1000px",
+          lg: "1200px",
+          xl: "1500px",
+          "2xl": "2360px",
         },
       },
       fontFamily: {

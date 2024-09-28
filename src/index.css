@@ -19,12 +19,10 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  @apply text-light;
 }
 
 @layer components {
-  .input {
-    @apply border-gray focus:border-darkB w-full rounded-md border p-[10px] outline-none transition-all placeholder:text-sm;
-  }
   .flexCenter {
     @apply flex items-center justify-center;
   }
