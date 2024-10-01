@@ -1,7 +1,7 @@
+import Video from "./Video";
 import CarouselContainer from "@/ui/CarouselContainer";
 import Title from "@/ui/Title";
 import { responsive } from "@/utils/data";
-import Video from "./Video";
 
 export default function Videos({ videos }) {
   return (

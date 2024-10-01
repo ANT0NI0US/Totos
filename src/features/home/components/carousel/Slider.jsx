@@ -23,7 +23,7 @@ export default function Slider({ selectedCategory, url, isTrending }) {
     <CarouselContainer screens={responsive}>
       {data?.results?.map((movie) => (
         <div
-          className="mx-1 mb-[30px] overflow-hidden rounded-md shadow-md drop-shadow-xl transition-all duration-[1s] hover:shadow-light"
+          className="group mx-1 h-full rounded-md shadow-md drop-shadow-xl transition-all duration-[1s] hover:shadow-orange"
           key={movie.id}
         >
           <Item movie={movie} selectedCategory={selectedCategory} />

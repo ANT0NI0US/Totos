@@ -4,12 +4,12 @@ export default function ToggleCategories({
   categories,
 }) {
   return (
-    <div className="w-fit rounded-md bg-secondary p-2 text-light">
-      <div className="flexCenter flex-wrap gap-4">
+    <div className="w-fit rounded-md bg-secondary p-[6px] text-light">
+      <div className="flexCenter flex-wrap gap-1">
         {categories?.map((category) => (
           <button
             key={category}
-            className={`rounded-md px-4 py-2 uppercase transition-all duration-200 ${
+            className={`rounded-md px-2 py-1 uppercase transition-all duration-200 ${
               category === selectedCategory ? "bg-orange" : "hover:bg-orange/60"
             }`}
             onClick={() => handleSelectNewCategory(category)}

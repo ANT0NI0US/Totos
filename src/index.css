@@ -32,6 +32,9 @@ body {
   img {
     @apply object-cover object-center;
   }
+  .btn {
+    @apply rounded-md border-2 border-light p-2 font-bold transition-all duration-200 hover:bg-light hover:text-black;
+  }
 }
 
 /* scrollbar Syles */

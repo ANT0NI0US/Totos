@@ -1,5 +1,5 @@
-import Title from "../../../../ui/Title";
-import ToggleCategories from "../../../../ui/ToggleCategories";
+import Title from "@/ui/Title";
+import ToggleCategories from "@/ui/ToggleCategories";
 
 export default function CarouselHead({
   categories,

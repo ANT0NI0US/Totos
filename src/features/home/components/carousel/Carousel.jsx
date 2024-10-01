@@ -1,4 +1,4 @@
-import useCategoriesData from "../../../../hooks/useCategoriesData";
+import useCategoriesData from "@/hooks/useCategoriesData";
 import Slider from "./Slider";
 import CarouselHead from "./CarouselHead";
 
@@ -7,8 +7,8 @@ export default function Carousel({ categories, url, isTrending, title }) {
     useCategoriesData(categories);
 
   return (
-    <>
-      {/* HEAD OF THE COMPONENT */}
+    <div className="my-[30px]">
+      {/* MOVIES HEAD */}
       <CarouselHead
         categories={categories}
         selectedCategory={selectedCategory}
@@ -21,6 +21,6 @@ export default function Carousel({ categories, url, isTrending, title }) {
         url={url}
         isTrending={isTrending}
       />
-    </>
+    </div>
   );
 }

@@ -21,8 +21,5 @@ export function getDetailsFromDate(dateString) {
   const monthFormatter = new Intl.DateTimeFormat("en-US", { month: "short" });
   const month = monthFormatter?.format(date);
 
-  // Combine day, month, and year
-  const dayMonthYear = `${month} ${day}, ${year}`;
-
-  return dayMonthYear;
+  return { month, day, year };
 }

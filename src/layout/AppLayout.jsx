@@ -4,9 +4,12 @@ import Navbar from "./navbar/Navbar";
 
 export default function AppLayout() {
   return (
-    <main>
+    <main className="flex min-h-screen flex-col justify-between">
       <Navbar />
-      <Outlet />
+
+      <div className="flex-1">
+        <Outlet />
+      </div>
       <Footer />
     </main>
   );

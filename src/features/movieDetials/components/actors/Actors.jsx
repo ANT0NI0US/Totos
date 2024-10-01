@@ -1,7 +1,7 @@
 import Actor from "./Actor";
-import { smallScreenResponsive } from "@/utils/data";
 import CarouselContainer from "@/ui/CarouselContainer";
 import Title from "@/ui/Title";
+import { smallScreenResponsive } from "@/utils/data";
 
 export default function Actors({ actors }) {
   return (

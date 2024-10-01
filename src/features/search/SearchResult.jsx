@@ -4,6 +4,7 @@ import GridContainer from "../../ui/GridContainer";
 import List from "../../ui/List";
 import Spinner from "../../ui/loader/Spinner";
 import Pagination from "../../ui/Pagination";
+import Title from "@/ui/Title";
 
 export default function SearchResult() {
   const { searchTitle, movieType } = useParams();
@@ -29,19 +30,28 @@ export default function SearchResult() {
   if (isLoading) return <Spinner />;
 
   return (
-    <div className="container py-[30px]">
-      <GridContainer>
-        <List movies={data?.results} />
-      </GridContainer>
+    <div className="container space-y-4 py-[30px]">
+      <Title text={`Results For ${searchTitle}`} />
+      {!data?.results?.length ? (
+        <p className="text-center text-2xl font-extrabold text-orange">
+          No results found.
+        </p>
+      ) : (
+        <>
+          <GridContainer>
+            <List movies={data?.results} />
+          </GridContainer>
 
-      {/* PAGINATION */}
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        totalResults={data?.total_results}
-        goToNextPage={handleNextPage}
-        goToPreviousPage={handlePreviousPage}
-      />
+          {/* PAGINATION */}
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            totalResults={data?.total_results}
+            goToNextPage={handleNextPage}
+            goToPreviousPage={handlePreviousPage}
+          />
+        </>
+      )}
     </div>
   );
 }
