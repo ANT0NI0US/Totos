@@ -3,11 +3,11 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import PageNotFound from "./PageNotFound";
 import Spinner from "@/ui/spinner/Spinner.jsx";
-import Movies from "@/features/Movies";
-import Tv from "@/features/Tv";
 
 const AppLayout = lazy(() => import("@/layout/AppLayout"));
 const Home = lazy(() => import("@/features/home/Home.jsx"));
+const Movies = lazy(() => import("@/features/Movies"));
+const Tv = lazy(() => import("@/features/Tv"));
 const Trending = lazy(() => import("@/features/Trending.jsx"));
 const TopRated = lazy(() => import("@/features/TopRated"));
 const Popular = lazy(() => import("@/features/Popular"));
@@ -15,7 +15,7 @@ const ComingSoon = lazy(() => import("@/features/ComingSoon"));
 const MovieDetails = lazy(
   () => import("@/features/movieDetials/MovieDetails.jsx"),
 );
-const SearchResult = lazy(() => import("@/features/search/SearchResult"));
+const SearchResult = lazy(() => import("@/features/SearchResult"));
 
 export default function Navigations() {
   return (
