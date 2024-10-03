@@ -2,12 +2,16 @@ import { lazy, Suspense } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import PageNotFound from "./PageNotFound";
-import Spinner from "../ui/loader/Spinner.jsx";
-import Trending from "../features/trending/Trending.jsx";
-import Home from "../features/home/Home.jsx";
-import MovieDetails from "../features/movieDetials/MovieDetails.jsx";
-import AppLayout from "@/layout/AppLayout";
-import SearchResult from "@/features/search/SearchResult";
+import Spinner from "@/ui/spinner/Spinner.jsx";
+
+const AppLayout = lazy(() => import("@/layout/AppLayout"));
+const Home = lazy(() => import("@/features/home/Home.jsx"));
+const Trending = lazy(() => import("@/features/trending/Trending.jsx"));
+const TopRated = lazy(() => import("@/features/topRated/TopRated"));
+const MovieDetails = lazy(
+  () => import("@/features/movieDetials/MovieDetails.jsx"),
+);
+const SearchResult = lazy(() => import("@/features/search/SearchResult"));
 
 export default function Navigations() {
   return (
@@ -19,6 +23,7 @@ export default function Navigations() {
           <Route path="/home" element={<Home />} />
           <Route path=":movieType/:movieId" element={<MovieDetails />} />
           <Route path="trending" element={<Trending />} />
+          <Route path="topRated" element={<TopRated />} />
           <Route
             path="search/:movieType/:searchTitle"
             element={<SearchResult />}

@@ -4,7 +4,7 @@ import Actors from "./components/actors/Actors";
 import Videos from "./components/videos/Videos";
 import Recommendations from "./components/Recommendations";
 import Similar from "./components/Similar";
-import Spinner from "@/ui/loader/Spinner";
+import Spinner from "@/ui/spinner/Spinner";
 import useGetDataFromApi from "@/hooks/useGetDataFromApi";
 
 export default function MovieDetails() {

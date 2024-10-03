@@ -1,5 +1,5 @@
 import useGetDataFromApi from "@/hooks/useGetDataFromApi";
-import Spinner from "@/ui/loader/Spinner";
+import Spinner from "@/ui/spinner/Spinner";
 import Item from "@/ui/Item";
 import { responsive } from "@/utils/data";
 import NoDataToDisplay from "@/ui/NoDataToDisplay";

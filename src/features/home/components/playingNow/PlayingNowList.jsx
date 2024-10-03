@@ -1,6 +1,6 @@
 import CertainPlayingNowDetails from "./CertainPlayingNowDetails";
 import CarouselContainer from "@/ui/CarouselContainer";
-import Spinner from "@/ui/loader/Spinner";
+import Spinner from "@/ui/spinner/Spinner";
 import { singleItemResponsive } from "@/utils/data";
 import useGetDataFromApi from "@/hooks/useGetDataFromApi";
 

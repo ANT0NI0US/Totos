@@ -12,6 +12,20 @@ export default function Search({ Styles, inputStyles }) {
   const { selectedCategory, handleSelectNewCategory } =
     useCategoriesData(categories);
 
+  const searchQueryHandler = () => {
+    if (query.length > 2) {
+      navigate(`/search/${selectedCategory}/${query}`);
+    } else if (query.trim() === "") {
+      navigate("/");
+    }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      searchQueryHandler();
+    }
+  };
+
   useEffect(() => {
     if (movieType) {
       handleSelectNewCategory(movieType);
@@ -25,18 +39,6 @@ export default function Search({ Styles, inputStyles }) {
       setQuery("");
     }
   }, [searchTitle]);
-
-  const searchQueryHandler = () => {
-    if (query.length > 2) {
-      navigate(`/search/${selectedCategory}/${query}`);
-    }
-  };
-
-  const handleKeyDown = (event) => {
-    if (event.key === "Enter") {
-      searchQueryHandler();
-    }
-  };
 
   return (
     <div className={`flexBetween gap-3 ${Styles}`}>

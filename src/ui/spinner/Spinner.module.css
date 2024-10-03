@@ -1,4 +1,4 @@
-.loader {
+.spinner {
   --d: 22px;
   box-shadow:
     calc(1 * var(--d)) calc(0 * var(--d)) 0 0,

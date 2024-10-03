@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import useGetDataFromApi from "../../hooks/useGetDataFromApi";
 import GridContainer from "../../ui/GridContainer";
 import List from "../../ui/List";
-import Spinner from "../../ui/loader/Spinner";
+import Spinner from "../../ui/spinner/Spinner";
 import Pagination from "../../ui/Pagination";
 import Title from "@/ui/Title";
 

@@ -7,4 +7,8 @@ export const links = [
     path: "trending",
     text: "Trending",
   },
+  {
+    path: "topRated",
+    text: "Top Rated",
+  },
 ];

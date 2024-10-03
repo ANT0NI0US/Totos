@@ -5,9 +5,9 @@ import Spinner from "@/ui/spinner/Spinner";
 import Pagination from "@/ui/Pagination";
 import Title from "@/ui/Title";
 
-export default function Trending() {
+export default function TopRated() {
   const { data, isLoading, updateParams } =
-    useGetDataFromApi(`trending/all/day`);
+    useGetDataFromApi(`movie/top_rated`);
 
   const totalPages = data?.total_pages || 1;
   const currentPage = data?.page || 1;
@@ -28,7 +28,7 @@ export default function Trending() {
 
   return (
     <div className="container space-y-4 py-[30px]">
-      <Title text="Trending" />
+      <Title text="Top Rated" />
 
       <GridContainer>
         <List movies={data?.results} />
