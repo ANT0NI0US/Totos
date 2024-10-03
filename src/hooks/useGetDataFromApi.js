@@ -1,6 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
 import { axios } from "../service/axios";
-const key = import.meta.env.VITE_API_KEY;
 
 export default function useGetDataFromApi(url) {
   const [data, setData] = useState(null);
@@ -12,6 +11,7 @@ export default function useGetDataFromApi(url) {
     try {
       setIsLoading(true);
       setError(null);
+      const key = import.meta.env.VITE_API_KEY;
 
       const { page } = params;
       const pageQuery = page ? `&page=${page}` : "";
