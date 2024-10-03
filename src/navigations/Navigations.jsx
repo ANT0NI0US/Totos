@@ -3,11 +3,15 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import PageNotFound from "./PageNotFound";
 import Spinner from "@/ui/spinner/Spinner.jsx";
+import Movies from "@/features/Movies";
+import Tv from "@/features/Tv";
 
 const AppLayout = lazy(() => import("@/layout/AppLayout"));
 const Home = lazy(() => import("@/features/home/Home.jsx"));
-const Trending = lazy(() => import("@/features/trending/Trending.jsx"));
-const TopRated = lazy(() => import("@/features/topRated/TopRated"));
+const Trending = lazy(() => import("@/features/Trending.jsx"));
+const TopRated = lazy(() => import("@/features/TopRated"));
+const Popular = lazy(() => import("@/features/Popular"));
+const ComingSoon = lazy(() => import("@/features/ComingSoon"));
 const MovieDetails = lazy(
   () => import("@/features/movieDetials/MovieDetails.jsx"),
 );
@@ -21,9 +25,13 @@ export default function Navigations() {
         <Route element={<AppLayout />}>
           <Route index element={<Navigate replace to="/home" />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/tv" element={<Tv />} />
           <Route path=":movieType/:movieId" element={<MovieDetails />} />
-          <Route path="trending" element={<Trending />} />
-          <Route path="topRated" element={<TopRated />} />
+          <Route path="trending/:category" element={<Trending />} />
+          <Route path="topRated/:category" element={<TopRated />} />
+          <Route path="popular/:category" element={<Popular />} />
+          <Route path="comingSoon" element={<ComingSoon />} />
           <Route
             path="search/:movieType/:searchTitle"
             element={<SearchResult />}

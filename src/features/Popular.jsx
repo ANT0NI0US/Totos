@@ -1,3 +1,4 @@
+import { useParams } from "react-router-dom";
 import useGetDataFromApi from "@/hooks/useGetDataFromApi";
 import GridContainer from "@/ui/GridContainer";
 import List from "@/ui/List";
@@ -5,9 +6,11 @@ import Spinner from "@/ui/spinner/Spinner";
 import Pagination from "@/ui/Pagination";
 import Title from "@/ui/Title";
 
-export default function TopRated() {
-  const { data, isLoading, updateParams } =
-    useGetDataFromApi(`movie/top_rated`);
+export default function Popular() {
+  const { category } = useParams();
+  const { data, isLoading, updateParams } = useGetDataFromApi(
+    `${category}/popular`,
+  );
 
   const totalPages = data?.total_pages || 1;
   const currentPage = data?.page || 1;
@@ -28,7 +31,7 @@ export default function TopRated() {
 
   return (
     <div className="container space-y-4 py-[30px]">
-      <Title text="Top Rated" />
+      <Title text="Popular" />
 
       <GridContainer>
         <List movies={data?.results} />

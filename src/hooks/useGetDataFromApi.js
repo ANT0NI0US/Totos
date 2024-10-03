@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import { axios } from "../service/axios";
-const key = "ee75e159d91b652da85c2411901811c1";
+const key = import.meta.env.VITE_API_KEY;
 
 export default function useGetDataFromApi(url) {
   const [data, setData] = useState(null);

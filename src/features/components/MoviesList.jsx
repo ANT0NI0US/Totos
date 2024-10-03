@@ -1,14 +1,9 @@
-import useGetDataFromApi from "@/hooks/useGetDataFromApi";
 import GridContainer from "@/ui/GridContainer";
 import List from "@/ui/List";
-import Spinner from "@/ui/spinner/Spinner";
 import Pagination from "@/ui/Pagination";
-import Title from "@/ui/Title";
+import Spinner from "@/ui/spinner/Spinner";
 
-export default function Trending() {
-  const { data, isLoading, updateParams } =
-    useGetDataFromApi(`trending/all/day`);
-
+export default function MoviesList({ data, loading, updateParams }) {
   const totalPages = data?.total_pages || 1;
   const currentPage = data?.page || 1;
 
@@ -24,12 +19,17 @@ export default function Trending() {
     }
   };
 
-  if (isLoading) return <Spinner />;
+  if (loading) return <Spinner />;
+
+  if (data?.results?.length === 0)
+    return (
+      <p className="!mt-10 text-center text-2xl font-extrabold text-orange">
+        No results found.
+      </p>
+    );
 
   return (
-    <div className="container space-y-4 py-[30px]">
-      <Title text="Trending" />
-
+    <>
       <GridContainer>
         <List movies={data?.results} />
       </GridContainer>
@@ -42,6 +42,6 @@ export default function Trending() {
         goToNextPage={handleNextPage}
         goToPreviousPage={handlePreviousPage}
       />
-    </div>
+    </>
   );
 }

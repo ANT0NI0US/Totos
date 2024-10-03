@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom";
 import Title from "@/ui/Title";
 import ToggleCategories from "@/ui/ToggleCategories";
+import { formatNavigationTitle } from "@/utils/formatNavigationTitle";
 
 export default function CarouselHead({
   categories,
@@ -7,16 +9,26 @@ export default function CarouselHead({
   handleSelectNewCategory,
   title,
 }) {
+  const formattedTitle = formatNavigationTitle(title);
+
   return (
-    <div className="flexBetween mb-5 flex-col gap-3 sm:flex-row">
+    <div className="flexBetween mb-5 flex-col gap-3 xs:flex-row">
       <Title text={title} />
-      {categories && (
-        <ToggleCategories
-          categories={categories}
-          selectedCategory={selectedCategory}
-          handleSelectNewCategory={handleSelectNewCategory}
-        />
-      )}
+      <div className="flexBetween flex-col gap-3 xs:flex-row">
+        {categories && (
+          <ToggleCategories
+            categories={categories}
+            selectedCategory={selectedCategory}
+            handleSelectNewCategory={handleSelectNewCategory}
+          />
+        )}
+        <Link
+          className="mx-auto w-fit sm:mx-0"
+          to={`/${formattedTitle}${selectedCategory ? `/${selectedCategory}` : ""}`}
+        >
+          <button className="btn">Load More</button>
+        </Link>
+      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@ export default function Trending() {
         categories={categories}
         url="trending/all"
         isTrending={true}
-        title="Trending"
+        title="trending"
       />
     </div>
   );

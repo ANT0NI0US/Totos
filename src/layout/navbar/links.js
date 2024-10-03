@@ -4,11 +4,11 @@ export const links = [
     text: "Home",
   },
   {
-    path: "trending",
-    text: "Trending",
+    path: "movies",
+    text: "Movies",
   },
   {
-    path: "topRated",
-    text: "Top Rated",
+    path: "tv",
+    text: "Tv",
   },
 ];
