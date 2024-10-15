@@ -26,7 +26,9 @@ export default function CarouselHead({
           className="mx-auto w-fit sm:mx-0"
           to={`/${formattedTitle}${selectedCategory ? `/${selectedCategory}` : ""}`}
         >
-          <button className="btn">Load More</button>
+          <button className="btn" aria-label="Load-more">
+            Load More
+          </button>
         </Link>
       </div>
     </div>

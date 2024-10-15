@@ -8,6 +8,7 @@ export default function ToggleCategories({
       <div className="flexCenter flex-wrap gap-1">
         {categories?.map((category) => (
           <button
+            aria-label="Get-Selected-category"
             key={category}
             className={`rounded-md px-2 py-1 uppercase transition-all duration-200 ${
               category === selectedCategory ? "bg-orange" : "hover:bg-orange/60"

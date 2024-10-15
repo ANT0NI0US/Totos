@@ -20,7 +20,7 @@ export default function Overview({ movie, trailer }) {
         title={movie?.title}
       />
       <div className="w-full space-y-3 text-center sm:basis-[60%] sm:text-start">
-        {/* MOVIE TITILE */}
+        {/* MOVIE TITLE */}
         <Title
           text={movie?.title || movie?.name}
           Styles="!text-orange !font-black"

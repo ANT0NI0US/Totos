@@ -1,5 +1,5 @@
 import useGetDataFromApi from "@/hooks/useGetDataFromApi";
-import MoviesList from "./components/MoviesList";
+import MoviesList from "@/ui/MoviesList";
 import Title from "@/ui/Title";
 
 export default function ComingSoon() {

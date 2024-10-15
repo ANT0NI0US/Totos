@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useGetDataFromApi from "@/hooks/useGetDataFromApi";
-import MoviesList from "./components/MoviesList";
-import AllGenres from "./components/AllGenres";
+import MoviesList from "@/ui/MoviesList";
+import AllGenres from "@/ui/AllGenres";
 import Spinner from "@/ui/spinner/Spinner";
 import Title from "@/ui/Title";
 
@@ -24,7 +24,7 @@ export default function Tv() {
     <div className="container space-y-4 py-[30px]">
       <Title text="tv" />
 
-      {/* FILTERD BY GENRES */}
+      {/* FILTERED BY GENRES */}
       <AllGenres
         genres={genres}
         loading={isGenresLoading}

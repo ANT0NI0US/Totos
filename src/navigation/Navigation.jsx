@@ -13,11 +13,11 @@ const TopRated = lazy(() => import("@/features/TopRated"));
 const Popular = lazy(() => import("@/features/Popular"));
 const ComingSoon = lazy(() => import("@/features/ComingSoon"));
 const MovieDetails = lazy(
-  () => import("@/features/movieDetials/MovieDetails.jsx"),
+  () => import("@/features/movieDetails/MovieDetails.jsx"),
 );
 const SearchResult = lazy(() => import("@/features/SearchResult"));
 
-export default function Navigations() {
+export default function Navigation() {
   return (
     <Suspense fallback={<Spinner />}>
       <Routes>

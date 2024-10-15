@@ -9,7 +9,9 @@ export default function OfficialTrailer({ officialTrailer }) {
         target="_blank"
         className="mx-auto flex w-fit flex-wrap items-center justify-center gap-2 sm:mx-0 sm:justify-start"
       >
-        <button className="btn">Watch Trailer</button>
+        <button className="btn" aria-label="Trailer">
+          Watch Trailer
+        </button>
       </Link>
     )
   );

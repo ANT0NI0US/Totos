@@ -1,7 +1,7 @@
 import { useState } from "react";
 import useGetDataFromApi from "@/hooks/useGetDataFromApi";
-import AllGenres from "./components/AllGenres";
-import MoviesList from "./components/MoviesList";
+import AllGenres from "@/ui/AllGenres";
+import MoviesList from "@/ui/MoviesList";
 import Spinner from "@/ui/spinner/Spinner";
 import Title from "@/ui/Title";
 

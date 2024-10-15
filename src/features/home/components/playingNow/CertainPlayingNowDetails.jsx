@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import useImagePath from "@/hooks/useImagePath";
-import Image from "@/ui/Image";
 import Title from "@/ui/Title";
 import { getDetailsFromDate } from "@/utils/getDetailsFromDate";
 
@@ -19,18 +18,18 @@ export default function CertainPlayingNowDetails({ movie }) {
   return (
     <div className="relative h-[calc(100dvh-80px)] w-full">
       {/* MOVIE IMAGE */}
-      <Image
+      <img
         src={imgPath}
         alt={movie?.name || movie?.title}
-        styles="h-[calc(100dvh-80px)] w-full object-cover"
+        className="h-[calc(100dvh-80px)] w-full object-cover"
       />
       {/* OVERLAY */}
       <div className="absolute inset-0 h-[calc(100dvh-80px)] w-full bg-black/15 bg-gradient-to-t from-black"></div>
 
       <div className="absolute top-[50%] w-full -translate-y-1/2 space-y-3 p-4 text-center sm:text-start md:p-8">
-        {/* MOVIE TITILE */}
+        {/* MOVIE TITLE */}
         <Title text={movie?.title || movie?.name} />
-        {/* MOVIEW OVERVIEW */}
+        {/* MOVIE OVERVIEW */}
         {movie?.overview && (
           <p className="w-full text-sm sm:max-w-[80%] md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">
             {truncateString(movie.overview, 150)}
@@ -41,9 +40,11 @@ export default function CertainPlayingNowDetails({ movie }) {
           {movie?.release_date && month && day && year && (
             <p className="font-bold">{`${month} ${day}, ${year}`}</p>
           )}
-          {/* MOVIE DETAILS NAVGATION */}
+          {/* MOVIE DETAILS NAVIGATION */}
           <Link className="mx-auto w-fit sm:mx-0" to={`/movie/${movie.id}`}>
-            <button className="btn">More Details</button>
+            <button className="btn" aria-label="More-details">
+              More Details
+            </button>
           </Link>
         </div>
       </div>

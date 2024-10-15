@@ -7,8 +7,8 @@ export default function CarouselContainer({ screens, children }) {
       partialVisible={false}
       additionalTransfrom={0}
       arrows
-      autoPlay
-      autoPlaySpeed={3000}
+      // autoPlay
+      // autoPlaySpeed={3000}
       draggable
       infinite
       keyBoardControl

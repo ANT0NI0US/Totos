@@ -26,6 +26,7 @@ export default function Pagination({
 
       <div className="flexBetween gap-[20px]">
         <button
+          aria-label="Previous"
           className={`flex items-center gap-1 rounded-md p-[3px] ${currentPage === 1 ? "cursor-not-allowed" : ""}`}
           onClick={goToPreviousPage}
           disabled={currentPage === 1}
@@ -35,6 +36,7 @@ export default function Pagination({
         </button>
 
         <button
+          aria-label="Next"
           className={`flex items-center gap-1 rounded-md p-[3px] ${currentPage === totalPages ? "cursor-not-allowed" : ""}`}
           onClick={goToNextPage}
           disabled={currentPage === totalPages}

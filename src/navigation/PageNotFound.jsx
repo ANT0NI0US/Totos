@@ -9,7 +9,10 @@ export default function PageNotFound() {
       <div className="text-bgColor absolute rotate-12 rounded bg-primary px-2 text-sm">
         Page Not Found
       </div>
-      <button className="text-bgColor mt-5 underline hover:bg-opacity-[0.9]">
+      <button
+        aria-label="Back-home"
+        className="text-bgColor mt-5 underline hover:bg-opacity-[0.9]"
+      >
         <Link to="/" replace className="flexCenter">
           <span>Back To Home</span>
         </Link>
